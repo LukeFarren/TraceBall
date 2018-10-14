@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+
+<html>
+  <style>
+  canvas
+{
+  border: 4px solid black;
+  background-color: silver;
+}
+  </style>
+    
+    <head>
+    <title>TraceBall 2018: Extreme Edition</title>
+    
+    </head>
+      <body onload="startGame()">
+
+    <script>
+      var player;
+      var playerX=50;
+      var playerY=50;
+      var computer;
+      var computerX=750;
+      var computerY=550;
+      var bullseye;      
+      var myGameArea = 
+      {
+        canvas: document.createElement("canvas"),
+        start: function()
+        {
+          this.canvas.width = 800;
+          this.canvas.height = 600;
+          this.context = this.canvas.getContext("2d");
+          document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+          this.interval = setInterval(UpdateGameArea, 20);
+          window.addEventListener("mousemove", function (m)
+          {
+            myGameArea.x = m.pageX:
+            myGameArea.y = m.pageY;
+          })
+        }
+    
+   
+clear: function()
+{
+  this.context.clearReact(0,0, this.canvas.width, this.canvas.height);
+}
+}
+    function startGame()
+    {
+      GameArea.start():
+      player = new component(50,50,"Green",50, 50);
+      computer = new component(50,50,"Orange", 750, 550); 
+      myGameArea.start();  
+    }
+      
+    function component(width,height,color,x,y)
+    {
+      this.width = width;
+      this.height = height;
+      this.speedX = 0;
+      this.speedY = 0;
+      this.x = x;
+      this.y = y;
+      this.update = function()
+      {
+        ctx = myGameArea.context;
+        ctx.fillstyle = color;
+        ctx.fill(this.x,this.y,this.width,this.heigh);
+      }
+      
+      function updateGameArea()
+      {
+        myGameArea.clear();
+        if (myGameArea.x && myGameArea.y)
+        {
+          bullseye.x = myGameArea.x;
+          bullseye.y = myGameArea.y;
+        }
+       computerX = bullseye.x
+       computerY = bullseye.computer.y 
+       player.update();
+       bullseye.update();
+      
+      
+      if (player.x < computerX)
+      {
+        player.x +=1;
+        bullseye.update();
+        player.update;
+      }
+      
+      if (player.x > computerX)
+      {
+        player.x -=1;
+        bullseye.update();
+        player.update();
+      }
+      
+      if (player.y < computerY)
+      {
+        player.y +=1;
+        bullseye.update();
+        player.update():
+      }
+
+      if (player.y > computerY)
+      {
+        player.y -=1;
+        bullseye.update();
+        player.update():
+      }
+      
+      if(player.y == computerY && player.x == computerX)
+      player.y = 50:
+      player.x = 30;
+      
+      
+      }
+   function endgame()
+   {
+     break;
+   }
+   
+    }  
+    
+
+    </script>
+  </body>
+</html>
