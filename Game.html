@@ -1,3 +1,4 @@
+//TraceBall Game, 2018 Ver 1.0 Luke Farren
 <!DOCTYPE html>
 
 
@@ -13,47 +14,48 @@
     <head>
     <title>TraceBall 2018: Extreme Edition</title>
     
-    </head>
-      <body onload="startGame()">
+	  </head> 
+      <body onload="startGame()">  
+	        <h1>TraceBall 2018: Extreme Edition</h1>
+           <p1>Rules: Each time you lose a life, the enemy speeds up! </p1>
+           <div id="myCanvasDiv"></div>
+           <div id="lifeCounter" style="font-size: 25px">3 lives left.</div>
 
-    <script>
+    <script> //Defines starting positions of both the user and enemey square
       var player;
       var playerX=50;
       var playerY=50;
       var computer;
       var computerX=750;
-      var computerY=550;
-      var bullseye;      
+      var computerY=550;     
       var myGameArea = 
       {
         canvas: document.createElement("canvas"),
         start: function()
-        {
-          this.canvas.width = 800;
-          this.canvas.height = 600;
-          this.context = this.canvas.getContext("2d");
-          document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-          this.interval = setInterval(UpdateGameArea, 20);
-          window.addEventListener("mousemove", function (m)
-          {
-            myGameArea.x = m.pageX:
-            myGameArea.y = m.pageY;
-          })
-        }
+			{
+			  this.canvas.width = 800;   //Defines canvas width and height 
+			  this.canvas.height = 600;
+        this.canvas.id = "myCanvas";
+			  this.canvas.style.cursor = "none"; //hides the mouse cursor
+			  this.context = this.canvas.getContext("2d");
+			  document.getElementById("myCanvasDiv").appendChild(this.canvas);  //pulls the canvas from the body div and displays it.
+			  //this.interval = setInterval(UpdateGameArea, 50); //Sets speed of refresh rate. 
+			  window.requestAnimationFrame(UpdateGameArea);	
+			  this.canvas.addEventListener("mousemove", function (m) // uses mouse input to track the mouse and around the page.
+			  {
+			  	
+				myGameArea.x = m.offsetX;
+				myGameArea.y = m.offsetY;
+			  })
+			
+      
+      },
+		clear: function()
+			{
+			  this.context.clearRect(0,0, this.canvas.width, this.canvas.height);
+			}
+		}
     
-   
-clear: function()
-{
-  this.context.clearReact(0,0, this.canvas.width, this.canvas.height);
-}
-}
-    function startGame()
-    {
-      GameArea.start():
-      player = new component(50,50,"Green",50, 50);
-      computer = new component(50,50,"Orange", 750, 550); 
-      myGameArea.start();  
-    }
       
     function component(width,height,color,x,y)
     {
@@ -64,67 +66,105 @@ clear: function()
       this.x = x;
       this.y = y;
       this.update = function()
-      {
-        ctx = myGameArea.context;
-        ctx.fillstyle = color;
-        ctx.fill(this.x,this.y,this.width,this.heigh);
-      }
-      
-      function updateGameArea()
-      {
-        myGameArea.clear();
-        if (myGameArea.x && myGameArea.y)
-        {
-          bullseye.x = myGameArea.x;
-          bullseye.y = myGameArea.y;
-        }
-       computerX = bullseye.x
-       computerY = bullseye.computer.y 
-       player.update();
-       bullseye.update();
-      
-      
-      if (player.x < computerX)
-      {
-        player.x +=1;
-        bullseye.update();
-        player.update;
-      }
-      
-      if (player.x > computerX)
-      {
-        player.x -=1;
-        bullseye.update();
-        player.update();
-      }
-      
-      if (player.y < computerY)
-      {
-        player.y +=1;
-        bullseye.update();
-        player.update():
-      }
+		  {
+			ctx = myGameArea.context;
+			ctx.fillStyle = color;
+			ctx.fillRect(this.x,this.y,this.width,this.height);
+		  }
+	this.crashWith = function(ecomputer) //defines the crash parameters 
+			  {
 
-      if (player.y > computerY)
-      {
-        player.y -=1;
-        bullseye.update();
-        player.update():
-      }
-      
-      if(player.y == computerY && player.x == computerX)
-      player.y = 50:
-      player.x = 30;
-      
-      
-      }
-   function endgame()
-   {
-     break;
-   }
-   
-    }  
-    
+				var playerleft = this.x;
+				var playerright = this.x + (this.width);
+				var playertop = this.y;
+				var playerbottom = this.y + (this.height);
+				var computerleft = ecomputer.x;
+				var computerright = ecomputer.x + (ecomputer.width);
+				var computertop = ecomputer.y;
+				var computerbottom = ecomputer.y + (ecomputer.height);
+				var crash = true;
+				if ((playerbottom < computertop) ||
+					(playertop> computerbottom) ||
+					(playerright < computerleft) ||
+					(playerleft > computerright)) {
+						crash = false;
+				}
+				return crash;
+			}
+    }
+	playerLives = 3;
+	enemySpeed = 2;
+
+    function UpdateGameArea() //defines how fast the enemy moves once you lose a life. 
+    {
+         if (playerLives === 2) 
+         {
+        enemySpeed = 4;
+        }
+         if (playerLives === 1) {
+        enemySpeed = 6;
+  }
+
+
+	{ 
+      if (computer.crashWith(player)) //defines 
+	  {
+                  
+                    window.cancelAnimationFrame(currentFrame); 
+                    playerLives -= 1;
+                    if (playerLives <= 0) {
+                        lifeCounter.innerHTML = "Game Over! Press F5 to Start Again";
+                    } else {
+                        lifeCounter.innerHTML = playerLives + " lives left.";
+                       resetGame();
+                    }
+	  }
+	  
+		myGameArea.clear();
+		if (myGameArea.x && myGameArea.y)
+		{
+			player.x = myGameArea.x;
+			player.y = myGameArea.y;
+		}
+	   
+	  if(player.y == computerY && player.x == computerX){
+		  player.y = 50;
+		  player.x = 50;
+	  }
+		if (computer.x < player.x-enemySpeed) {
+        computer.x += enemySpeed;
+                    } else if (computer.x > player.x + enemySpeed) {
+                        computer.x -= enemySpeed;
+                    }
+                    if (computer.y < player.y-enemySpeed) {
+                        computer.y += enemySpeed;
+                    } else if (computer.y > player.y - enemySpeed) {
+                        computer.y -= enemySpeed;
+                    }
+	  player.update();
+	  computer.update();
+	  currentFrame = window.requestAnimationFrame(UpdateGameArea);
+
+    } 
+	}
+	function startGame()
+    {
+      myGameArea.start();
+      player = new component(50,50,"Green",50, 50);
+      computer = new component(50,50,"Orange", 750, 550); 
+      myGameArea.start();  
+    }
+      function resetGame() {
+                myGameArea.clear();
+                player.x = 50;
+                player.y = 50;
+                computer.x = 750;
+                computer.y = 550;
+                player.update();
+                computer.update();
+            
+                setTimeout(UpdateGameArea,1500);
+            }
 
     </script>
   </body>
