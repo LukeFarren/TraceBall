@@ -1,4 +1,4 @@
-## TraceBall 2018 Project One Version 1.0
+## TraceBall 2018 Project One Version 1.0 - Luke Farren
 
 ## 1.0 Initiative
 
@@ -12,34 +12,71 @@ Design a 2d chase game coded with HTML, JavaScript and CSS that can be played wi
  * Playable in a Web Browser 
  * Game played with mouse input only
  * Computer enemy controlled by AI
+ * Enemy must follow player piece. 
+ * Enemy must be able to collide with player piece
  * User has 3 lives
  * Game ends when the user has zero lives left
 
+**2.2 Non-Functional requirements** 
 
-**2.2 Non-Functional requirements 
+* Canvas size and colour. 
+* Player size and colour.
+* AI size and colour.
+* AI player speed.
+* AI enemy speed increases with every life lost.
+* 
 
 **2.3 User Stories** 
 
-*  Easy and clear instructions 
-* Clean and simple canvas to play on
-* 
+*  As a player, I would like the enemy AI to chase my own game piece around the game area.
+* As a player, I would like the enemy piece to collide with my piece causing me to lose a life.
+* As a player, I would like to have clear instructions on how to play the game.
+* As a player, I would like the game to display current lives
+* As a player, I would like the game to display 'Game over' once all lives have been used.
+* As a player, I would like a reset button to restart the game after losing.
+* As a player, I would like a win scenario.
+* As a player, I would like the game to be colourblind friendly.
+* As a player, I would like all text to be legible.   
 
-##### Requirements
+### 3.0. Genre
+Browser based 2d chase game.  
 
-
-### III. Genre
-
-### IV. Technical Details
+### 4.0. Technical Details
 
 ##### Platform
-
+Simple and free text editor Notepad was the only program allowed. 
 
 ##### Programming Language/Enviroment
-
+The only language that was allowed to be used was HTML, JavaScript and CSS. 
 
 ##### Programming Challenges
+* Small amount of knowledge of programming in general, with only a small amount of experience with C++, LUA and AHK. 
+* Small amount of information given to start programming the game. 
+* Different programming standards used when researching codes from different sources. 
+* Steep learning curve and a different environment than familiar. 
+* Creating the chase algorithm.
+* Creating the collide algorithm.
+* Small bugs in code without error messages. 
 
-##### Constructing And Implementing My Code
+
+##### Constructing And Implementing Code
+Task 1 - Understand how functions are written in JavaScript.
+Task 2 - Research different coding practices used for JavaScript.
+Task 3 -  Create a flow chart to show what needs to be written into the program and group them into function and algorithm blocks. 
+Task 4 -   Set up a blank JavaScript session in Notepad which includes appropriate tags such as html, body style and script. 
+Task 5 - Define a canvas with a border and background colour in the style tag. 
+Task 6 - Add an appropriate title (h1), the rules/instructions (p1), a canvas div and a life counter div into the body on load tag.
+Task 7 - Create different variables for each of the players and there X, Y coordinates and a game area variable. 
+Task 8 - Create the canvas using the already defined canvas dimensions using document.getElementById and define how often the game area updates using setInterval.
+Task 9 - Display the player square using the already defined player piece and its X, Y position variables using a function.
+Task 10 - Get the player square to follow the mouses X, Y coordinates and hide the mouse cursor.
+ Task 11 - Display enemy square using the already defined enemy piece variables and the X, Y variables using a function. 
+Task - 12 Define player lives and enemy speed. 
+ Task 13 - Use an algorithm to get the enemy square to move frame by frame towards the X, Y/player piece coordinates using the defined enemy speed.
+ Task 14 - Set up a collision function between the two pieces when there X and Y coordinates match.
+ Task 15 - Create a function to lose a life when the collision function requirements have been met this uses the already established enemy lives. 
+ Task 16 - Create a function that ends the game and displays end game text,
+  
 
 
 ##### Algorithms
@@ -67,4 +104,4 @@ Design a 2d chase game coded with HTML, JavaScript and CSS that can be played wi
 
 
  
-##### Flowchart -> Code
+
