@@ -1,11 +1,27 @@
 ## Glossary
 
-Algorithm - *step by step method of solving a problem.*
- 
-Mark Down
- 
-Variable
+**Algorithms**
 
-Function
+ An algorithm is a set of mathematical rules and instructions given to a computer that will help answer a particular problem. On example of an algorithm is the web player Spotify to calculate if you would be interested in similar bands to the ones you are already listening to. 
+ 
+ **Building an application**
+* Select a software life cycle to use e.g. Agile, Spiral, Waterfall etc.
+* Determine the requirements, usually given in a specification or proposal 
+* Make a plan keeping in mind time frames.
+* Design. 
+* Prototyping and debugging.
+* Implementation. 
+* Maintenance. 
 
-Execution
+ ## Paradigms  
+ **Procedural Oriented Paradigms**
+
+An application built using procedural oriented paradigm uses functions and algorithms to perform each task. Some of the defining characters of Procedural oriented paradigms is the main interest is on the process of designing the code and not on data. It is also divided into clear function blocks with each one having its own purpose. However, there are draw backs to this method it easy easy to corrupt data when adding new functions. 
+
+**Object Oriented Paradigms**
+
+This paradigm is based on objects and not on the process, its main advantages are its re-usability and modularity. It uses classes to group functions together thus helping to design complex programs such as video games.  
+
+**Event-Driven Paradigms** 
+
+An event-driven paradigm reacts to user events or other inputs,    
