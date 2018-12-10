@@ -2,11 +2,12 @@
 
 **Algorithms**
 
- An algorithm is a set of mathematical rules and instructions given to a computer that will help answer a particular problem. On example of an algorithm is the web player Spotify to calculate if you would be interested in similar bands to the ones you are already listening to. 
+ An algorithm is a set of mathematical rules and instructions given to a computer that will help answer a particular problem. On example of an algorithm is the web player Spotify to calculate if you would be interested in similar bands to the ones you are already listening to. ***(Cambridge, 2018)***
  
  **Building an application**
+
+ * Determine the requirements, usually given in a specification or proposal 
 * Select a software life cycle to use e.g. Agile, Spiral, Waterfall etc.
-* Determine the requirements, usually given in a specification or proposal 
 * Make a plan keeping in mind time frames.
 * Design. 
 * Prototyping and debugging.
@@ -14,14 +15,56 @@
 * Maintenance. 
 
  ## Paradigms  
+
  **Procedural Oriented Paradigms**
 
-An application built using procedural oriented paradigm uses functions and algorithms to perform each task. Some of the defining characters of Procedural oriented paradigms is the main interest is on the process of designing the code and not on data. It is also divided into clear function blocks with each one having its own purpose. However, there are draw backs to this method it easy easy to corrupt data when adding new functions. 
+An application built using procedural oriented paradigm uses functions and algorithms to perform each task in a step by step procedure. ***(Chakrabarty, 2013)***
+
+**Characteristics of Procedural Oriented Paradigms.**
+
+*  The main interest is on the process of designing the code and not on data.
+* Problems are divided into functions.
+* Each function shares common data.
+* Functions transfer data to other functions.
+* Top down approach to programming.
+***(Chakrabarty, 2013)***
 
 **Object Oriented Paradigms**
 
-This paradigm is based on objects and not on the process, its main advantages are its re-usability and modularity. It uses classes to group functions together thus helping to design complex programs such as video games.  
+This paradigm is based on objects and not on the process, its main advantages are its re-usability and modularity. It uses classes to group functions together thus helping to design complex programs such as video games. (Tutorials Point, 2014)  
+
+**Characteristics of Object Oriented Paradigms.**
+
+* Focuses on data and not the process.
+* 
+*
+
 
 **Event-Driven Paradigms** 
 
-An event-driven paradigm reacts to user events or other inputs,    
+An event-driven paradigm reacts to user events or other inputs, examples include mouse inputs such as X and Y position which is detected by an event listener this then triggers a function.  (TechnologyUK, 2018)
+  
+  **Characteristics of Event-Driven Paradigms.**
+
+*
+*
+   
+   
+**Relationship Between Paradigms** 
+***(Frankenmint, 2016)***
+
+**Debugging** 
+
+**Coding Standard**
+
+**Bibliography**
+
+Cambridge (2018). _ALGORITHM | meaning in the Cambridge English Dictionary_. [online] Dictionary.cambridge.org. Available at: https://dictionary.cambridge.org/dictionary/english/algorithm [Accessed 10 Dec. 2018].
+
+(Chakrabarty, T. (2013).  _What are the main characteristics of Procedure Oriented Programming (POP)?_. [online] Online Class Notes. Available at: https://www.onlineclassnotes.com/2013/08/what-are-main-characteristics-of.html [Accessed 10 Dec. 2018].
+
+Frankenmint (2016).  _Comparing Programming Paradigms: Procedural Programming vs Object-oriented Programming | Codementor_. [online] Codementor.io. Available at: https://www.codementor.io/learn-programming/comparing-programming-paradigms-procedural-programming-vs-object-oriented-programming [Accessed 10 Dec. 2018].
+
+Tutorials Point (2014).  _OOAD Object Oriented Paradigm_. [online] www.tutorialspoint.com. Available at: https://www.tutorialspoint.com/object_oriented_analysis_design/ooad_object_oriented_paradigm.htm [Accessed 10 Dec. 2018].
+
+TechnologyUK (2018). _Event Driven Programming_. [online] Technologyuk.net. Available at: http://www.technologyuk.net/software-development/designing-software/event-driven-programming.shtml [Accessed 10 Dec. 2018].
